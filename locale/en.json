@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Turn Metrics (Prefill / Decode / TTFT)",
+    "description": "Displays per-turn TTFT, Prefill (PP) speed & time, Decode (TG) speed & time, and per-step breakdown at the bottom of each turn."
+  }
+}

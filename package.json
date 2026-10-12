@@ -1,0 +1,82 @@
+{
+  "name": "dsh-turn-metrics",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness 每轮会话性能指标插件：在每轮回复底部实时显示 TTFT（首字延迟）、预读取（Prefill token 数、耗时与 tok/s 吞吐、缓存命中率）、解码（Decode token 数、耗时与 tok/s 速度），支持多步 Agent 调用逐步骤拆解与本地 llama-server 硬件级 timings / MTP 草稿接受率自动关联。",
+  "type": "module",
+  "main": "lib/index.js",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "manifestVersion": 1,
+    "displayName": "TurnMetrics (每轮预读取/解码/TTFT)",
+    "displayDescription": "在每轮会话底部显示预读取（PP）、解码（TG）、TTFT 速度与耗时明细",
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "slots",
+        "sessions",
+        "conversation"
+      ]
+    },
+    "compatibility": {
+      "dsh": ">=0.1.0-rc.5"
+    }
+  },
+  "dshhub": {
+    "schemaVersion": 1,
+    "displayName": "dsh-turn-metrics",
+    "summary": "每轮会话显示预读取（Prefill）、解码（Decode）、TTFT 与多步 Agent 耗时拆解，支持本地 llama-server 硬件 timings 关联。",
+    "categories": [
+      "观测",
+      "Web UI",
+      "性能"
+    ],
+    "surfaces": [
+      "host",
+      "web"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snow930/dsh-turn-metrics.git"
+  },
+  "homepage": "https://github.com/snow930/dsh-turn-metrics#readme",
+  "bugs": {
+    "url": "https://github.com/snow930/dsh-turn-metrics/issues"
+  },
+  "author": "snow930",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "client-plugin",
+    "metrics",
+    "ttft",
+    "prefill",
+    "decode",
+    "tps",
+    "llama-server"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  }
+}

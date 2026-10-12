@@ -1,0 +1,4 @@
+# dsh-turn-metrics bundle patch layer —— 挂载每轮预读取/解码/TTFT 性能指标插件
+- insert:
+    - id: dsh-turn-metrics
+      name: dsh-turn-metrics

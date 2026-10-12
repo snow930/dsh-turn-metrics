@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "每轮性能指标 (TurnMetrics)",
+    "description": "在每轮会话底部显示 TTFT（首字时间）、预读取（Prefill 速度与耗时）、解码（Decode 速度与耗时）及逐步骤拆解。"
+  }
+}
