@@ -1,6 +1,6 @@
 {
   "name": "dsh-turn-metrics",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "DeepSeek Harness 每轮会话性能指标插件：在每轮回复底部实时显示 TTFT（首字延迟）、预读取（Prefill token 数、耗时与 tok/s 吞吐、缓存命中率）、解码（Decode token 数、耗时与 tok/s 速度），支持多步 Agent 调用逐步骤拆解与本地 llama-server 硬件级 timings / MTP 草稿接受率自动关联。",
   "type": "module",
   "main": "lib/index.js",
